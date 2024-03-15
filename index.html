@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li> Welcome to Tic Tac Toe by Simran</li>
+        </ul>
+    </nav>
+
+    <!--
+<div id="playerNames">
+    <label for="playerXName">Player X Name:</label>
+    <input type="text" id="playerXName" placeholder="Enter name for Player X">
+    <br>
+    <label for="playerOName">Player O Name:</label>
+    <input type="text" id="playerOName" placeholder="Enter name for Player O">
+    <br>
+    <button id="startGameButton">Start Game</button>
+</div>
+
+-->
+
+
+    <div class="gameContainer">
+        <div class="line">
+
+        </div>
+
+        <div class="container">
+            <div class="box bt-0 bl-0"> <span class="boxText"></span> </div>
+            <div class="box bt-0"> <span class="boxText"></span> </div>
+            <div class="box bt-0 br-0"> <span class="boxText"></span> </div>
+            <div class="box bl-0"> <span class="boxText"></span> </div>
+            <div class="box"> <span class="boxText"></span> </div>
+            <div class="box br-0"> <span class="boxText"></span> </div>
+            <div class="box bl-0 bb-0"> <span class="boxText"></span> </div>
+            <div class="box bb-0"> <span class="boxText"></span> </div>
+            <div class="box bb-0 br-0"> <span class="boxText"></span> </div>
+
+        </div>
+
+
+
+        <div class="gameInfo">
+            <h1> Lets Play !!</h1>
+
+
+
+            <div claass="imgBox">
+                <img src="excited.gif" alt="">
+            </div>
+
+            <div class="turnBox">
+                <span class="info">Turn for X</span>
+            </div>
+
+            <div class="timer" id="timerX">00:00</div>
+            <div class="timer" id="timerO">00:00</div>
+
+        </div>
+
+    </div>
+    <div class="resetButton">
+        <button id="reset">Reset</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

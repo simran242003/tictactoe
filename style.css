@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+}
+
+nav {
+  background-color: #215403;
+  color: white;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav li {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+}
+
+nav li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.gameContainer {
+  background-color: #b8d8c8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 92px);
+  position: relative;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  width: 300px;
+  height: 300px;
+  padding: 8px;
+  border: 2px solid #333;
+  border-radius: 12px;
+  background-color: white;
+  position: relative;
+
+
+}
+
+.box {
+  border: 2px solid black;
+  font-size: 3rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.box:hover {
+  background-color: #f0f0f0;
+}
+
+.gameInfo {
+  text-align: center;
+  margin-top: 10px;
+
+
+}
+
+#reset {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  position:relative;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width:150px;
+  padding:12px;
+}
+
+
+#reset:hover {
+  background-color: #45a049;
+}
+
+.imgBox img {
+  display: none;
+}
+
+.br-0 {
+  border-right: 0;
+}
+
+.bl-0 {
+  border-left: 0;
+}
+
+.bb-0 {
+  border-bottom: 0;
+}
+
+.bt-0 {
+  border-top: 0;
+}
+
+
+.info {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.line {
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: black;
+  transition: width 1s ease-in-out;
+  z-index: 1;
+
+}
+
+
+
+.timer-container {
+  position: relative;
+}
+
+.timer {
+  font-size: 36px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#timerX {
+  font-size: 36px;
+  position: absolute;
+  top: 70px;
+  /* Adjusted to provide space below the timer */
+  right: 20px;
+
+}
+
+.playerNameInput input {
+  padding: 8px;
+  /* Increase padding for larger input fields */
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  /* Increase font size */
+}
+
+
+#startGameButton {
+  width: 150px;
+  /* Adjust width of button */
+  padding: 12px;
+  /* Increase padding */
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  /* Increase font size */
+}
+
+#startGameButton:hover {
+  background-color: #45a049;
+}
+
+
+
+.winning-box {
+  background-color: #ed6c6c; /* Change the background color to indicate winning state */
+  transition: background-color 0.5s; /* Apply a smooth transition effect */
+ transform: scale(1.1); /* Apply a scale effect to make the winning boxes stand out */
+ animation: flash 1s infinite alternate; /* Apply flashing effect */
+}
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 768px) {
+  .winning-box {
+    background-color: #ed6c6c; /* Change the background color to indicate winning state */
+    transition: background-color 0.5s; /* Apply a smooth transition effect */
+    transform: scale(1.1); /* Apply a scale effect to make the winning boxes stand out */
+    animation: flash-mobile 1s infinite; /* Apply flashing effect */
+  }
+}
